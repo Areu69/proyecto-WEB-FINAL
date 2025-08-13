@@ -1,179 +1,232 @@
-/* Importar fuentes de Google */
-body {
-    font-family: 'Roboto', sans-serif;
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+}
+.logo-img {
+    height: 100px;       /* Puedes subirlo a 100px o más */
+    max-width: 100%;
+    object-fit: contain; /* Opcional: mantiene proporciones dentro del espacio */
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
-h1, h2 {
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 2px;
-}
-
-/* Encabezado */
 .main-header {
-    background-color: #fff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #007acc;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
 }
 
-.logo h1 {
-    margin: 0;
-    color: #e44d26;
+.main-header h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+
+.main-nav {
+    background-color: #005f99;
 }
 
 .main-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
 .main-nav li {
-    margin-left: 20px;
+    flex: 1 0 auto;
 }
 
 .main-nav a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-align: center;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: #e44d26;
+    background-color: #004c80;
 }
 
-/* Sección principal (Hero) */
 .hero {
-    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover; /* Reemplaza con tu imagen de fondo */
-    color: #fff;
+    background: linear-gradient(to right, #007acc, #005f99);
+    color: white;
+    padding: 3rem 1rem;
     text-align: center;
-    padding: 150px 20px;
-    position: relative;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura para mejorar la legibilidad */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
 }
 
 .hero h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .cta-button {
-    background-color: #e44d26;
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: #007acc;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #ff6633;
+    background-color: #e6e6e6;
 }
 
-/* Sección de hamburguesas */
+.main-header {
+    background-color: #ffffff;
+    color: #005f99;
+}
+.main-nav {
+    background-color: #f0f0f0;
+}
+.main-nav a {
+    color: #007acc;
+}
+
+
 .populares {
-    padding: 50px 20px;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
-.burgers-grid {
+.populares h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #007acc;
+}
+.burger-card img {
+    width: 100%;
+    height: 180px; /* Tamaño fijo uniforme */
+    object-fit: cover; /* Recorta elegantemente si no encaja */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+
+.contenedor-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .burger-card {
-    background-color: #fff;
-    padding: 20px;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.burger-card:hover {
-    transform: translateY(-10px);
+    padding: 1rem;
+    text-align: left;
 }
 
 .burger-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .burger-card h3 {
-    margin-top: 0;
-    color: #e44d26;
+    margin: 0.5rem 0;
+    color: #005f99;
+    font-size: 1.3rem;
 }
 
-/* Pie de página */
+.burger-card p {
+    font-size: 0.95rem;
+}
+
+
 .main-footer {
     background-color: #222;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 2rem 1rem;
 }
 
 .social-links a {
-    color: #fff;
     margin: 0 10px;
+    color: #4fc3f7;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #e44d26;
+    text-decoration: underline;
 }
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        padding: 20px;
+/* RESPONSIVE */
+
+/* Tablet (768px) */
+@media (max-width: 992px) {
+    .hero h2 {
+        font-size: 2rem;
     }
 
-    .main-nav ul {
-        margin-top: 20px;
+    .hero p {
+        font-size: 1.1rem;
     }
 
-    .main-nav li {
-        margin: 0 10px;
+    .contenedor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móvil (600px) */
+@media (max-width: 600px) {
+    .main-header h1 {
+        font-size: 2rem;
     }
 
     .hero h2 {
-        font-size: 2em;
+        font-size: 1.5rem;
     }
 
-    .burgers-grid {
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li {
+        width: 100%;
+    }
+
+    .contenedor-grid {
         grid-template-columns: 1fr;
+    }
+
+    .populares h2 {
+        font-size: 1.5rem;
     }
 }
