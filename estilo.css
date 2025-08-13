@@ -179,7 +179,7 @@ body {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+
 /* === MENÚ HAMBURGUESA === */
 .menu-toggle {
     display: none; /* Oculto en escritorio */
@@ -188,24 +188,17 @@ body {
     border: none;
     cursor: pointer;
     color: #007acc;
-    position: absolute;
-    right: 1rem;
-    top: 1.5rem;
-    z-index: 1001; /* Asegura que esté por encima del contenido */
-}
-
-/* Ajustar posición del header para el botón */
-.main-header {
-    position: relative;
 }
 
 /* Mostrar hamburguesa en móviles y ocultar menú normal */
 @media (max-width: 600px) {
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
     }
 
-    /* Menú oculto por defecto en móvil */
     .main-nav {
         display: none;
         flex-direction: column;
@@ -213,28 +206,16 @@ body {
         position: absolute;
         top: 70px;
         right: 0;
-        width: 220px;
+        width: 200px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        border-radius: 5px 0 0 5px;
-        z-index: 1000;
     }
 
-    /* Mostrar menú cuando está activo */
     .main-nav.active {
         display: flex;
     }
-
-    /* Ajustar enlaces dentro del menú móvil */
-    .main-nav a {
-        padding: 1rem;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .main-nav a:hover {
-        background-color: #e6e6e6;
-    }
 }
+
+/* RESPONSIVE */
 
 /* Tablet (768px) */
 @media (max-width: 992px) {
