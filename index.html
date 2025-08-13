@@ -83,6 +83,15 @@
             <a href="https://www.linkedin.com/company/interactive-learning-and-marketing-content-design/"target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
     </footer>
+     <!-- Script para el menú -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
